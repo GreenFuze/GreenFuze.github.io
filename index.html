@@ -3,20 +3,22 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="GreenFuze Dev Home — open-source software, developer tools, and integrations.">
+  <meta name="description" content="GreenFuze Dev Home — programming-language interoperability, repository intelligence, and developer tooling.">
   <title>GreenFuze Dev Home</title>
   <style>
     :root { color-scheme: dark; font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
     * { box-sizing: border-box; }
     body { margin: 0; min-height: 100vh; display: grid; place-items: center; color: #eef7ff; background: radial-gradient(circle at top, #14334d, #07131f 62%); }
-    main { width: min(760px, calc(100% - 40px)); margin: 40px 0; padding: 48px; border: 1px solid #285274; border-radius: 22px; background: rgba(8, 25, 39, .86); box-shadow: 0 24px 70px rgba(0, 0, 0, .35); }
+    main { width: min(920px, calc(100% - 40px)); margin: 40px 0; padding: 48px; border: 1px solid #285274; border-radius: 22px; background: rgba(8, 25, 39, .86); box-shadow: 0 24px 70px rgba(0, 0, 0, .35); }
     .eyebrow { margin: 0 0 12px; color: #62d4ff; font-size: .82rem; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; }
     h1 { margin: 0 0 12px; font-size: clamp(2.4rem, 8vw, 4.5rem); letter-spacing: -.05em; }
     h2 { margin: 40px 0 14px; font-size: 1.15rem; letter-spacing: .02em; }
     p { color: #b9d0df; font-size: 1.08rem; line-height: 1.65; }
-    .project { padding: 24px; border: 1px solid #285274; border-radius: 16px; background: #0b2132; }
+    .intro { max-width: 760px; }
+    .projects { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px; }
+    .project { display: flex; flex-direction: column; padding: 24px; border: 1px solid #285274; border-radius: 16px; background: #0b2132; }
     .project h3 { margin: 0 0 8px; font-size: 1.35rem; }
-    .project p { margin: 0; font-size: 1rem; }
+    .project p { flex: 1; margin: 0; font-size: 1rem; }
     .actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 20px; }
     a { display: inline-block; padding: 11px 16px; border-radius: 10px; color: #06131d; background: #62d4ff; font-weight: 700; text-decoration: none; }
     a.secondary { color: #d9effb; background: transparent; border: 1px solid #3a6d8d; }
@@ -29,19 +31,44 @@
   <main>
     <p class="eyebrow">Open-source software</p>
     <h1>GreenFuze Dev Home</h1>
-    <p>Developer tools and integrations built to make software—and the things connected to it—more useful.</p>
+    <p class="intro">I build systems that help complex software understand and work with other software: programming-language interoperability, repository and build intelligence, polyglot tooling, code analysis, and developer automation grounded in real toolchain evidence.</p>
 
-    <h2>Projects</h2>
-    <section class="project">
-      <h3>Cloud Storage for Playnite</h3>
-      <p>A Playnite library integration for discovering, installing, and managing games stored in Google Drive and Microsoft OneDrive.</p>
-      <div class="actions">
-        <a href="/PlayniteCloudSource/">Project website</a>
-        <a class="secondary" href="https://github.com/GreenFuze/PlayniteCloudSource">Source code</a>
-      </div>
-    </section>
+    <h2>Selected projects</h2>
+    <div class="projects">
+      <section class="project">
+        <h3>MetaFFI</h3>
+        <p>A programming-language interoperability system for connecting code and runtimes across language boundaries through a common plugin architecture.</p>
+        <div class="actions">
+          <a href="https://github.com/MetaFFI/metaffi-root">Explore MetaFFI</a>
+        </div>
+      </section>
 
-    <footer>More GreenFuze development projects are coming soon.</footer>
+      <section class="project">
+        <h3>Spade</h3>
+        <p>Repository intelligence that maps software components and their relationships using evidence from source trees, build systems, and development toolchains.</p>
+        <div class="actions">
+          <a href="https://github.com/GreenFuze/spade">View source</a>
+        </div>
+      </section>
+
+      <section class="project">
+        <h3>SuitCode</h3>
+        <p>Evidence-backed codebase context for coding agents, built from import graphs, language tooling, test relationships, and measured relevance.</p>
+        <div class="actions">
+          <a href="https://github.com/GreenFuze/SuitCode">View source</a>
+        </div>
+      </section>
+
+      <section class="project">
+        <h3>MetaSCons</h3>
+        <p>Typed build-system abstractions for complex, multilingual software projects, with an emphasis on reusable structure and better tooling support.</p>
+        <div class="actions">
+          <a href="https://github.com/MetaFFI/MetaSCons">View source</a>
+        </div>
+      </section>
+    </div>
+
+    <footer>More experiments in runtimes, compilers, build systems, and developer tooling are always in progress.</footer>
   </main>
 </body>
 </html>
