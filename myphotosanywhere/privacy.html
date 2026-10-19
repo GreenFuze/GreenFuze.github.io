@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Privacy policy for MyPhotosAnywhere and its companion Processor.">
+  <title>Privacy policy · MyPhotosAnywhere</title>
+  <link rel="stylesheet" href="../cloud-storage/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="./"><span>MyPhotosAnywhere <small>by GreenFuze</small></span></a>
+    <nav aria-label="Primary navigation"><a href="./">Home</a><a aria-current="page" href="privacy.html">Privacy</a><a href="terms.html">Terms</a><a href="../">Developer</a></nav>
+  </header>
+  <main class="document">
+    <p class="eyebrow">Effective October 19, 2026</p>
+    <h1>Privacy policy</h1>
+    <p class="lede">MyPhotosAnywhere (MPA) is a gallery that uses your devices and connected Google Drive storage. There is no mandatory MPA-hosted backend. The companion MPA Processor described here is under development; release notes identify which features are available in each version.</p>
+
+    <h2>Information MPA accesses</h2>
+    <p>With your authorization, MPA accesses connected Google account and Drive file identifiers, folder structure, names, sizes, revisions, checksums, thumbnails, photo and video content, and associated metadata. Photo information may include capture dates, location, camera details, captions, people names and album memberships. Device photos require Android media access; Takeout archives or folders are accessed when you select them.</p>
+    <p>Supported versions can also import photos and videos you explicitly select using Google Photos Picker. That permission covers selected media and does not grant access to your entire Google Photos library.</p>
+
+    <h2>Google permissions and purpose</h2>
+    <p>MPA uses <code>drive.file</code> for app-authorized files and can request the restricted <code>drive</code> scope for existing folders, recursive discovery and user-requested file operations. The broader scope technically permits reading, creating, editing and deleting files throughout the authorized Drive. It is not a Google-enforced folder-only permission. MPA limits its library operations to sources and destinations you configure and its managed metadata workspace.</p>
+    <p>These permissions support discovery, viewing and verified downloads, explicit backup/import, metadata and preview synchronization, and user-approved organization or Drive Trash/restore actions. Background analysis does not authorize changing original media bytes or embedded metadata. Camera discovery does not automatically enable backup.</p>
+    <p>The optional Google Photos Picker permission is <code>photospicker.mediaitems.readonly</code>; MPA uses it to read the media you select for import.</p>
+
+    <h2>Processing and derived information</h2>
+    <p>Depending on the installed version, optional analysis runs on your Android device or, in the planned 0.6 architecture, your paired computer. Analysis can generate previews, face regions and identity suggestions, object/category labels, recognized text and technical media information. Recognition features require their corresponding consent. Face names imported from Takeout and your manual corrections can form part of library metadata.</p>
+    <p>Face embeddings used for matching remain on the device performing recognition; they are not part of the synchronized phone catalog in the planned Processor release. Permitted identity annotations, regions and previews can be stored in your Drive workspace to support the gallery. Analysis does not train a general-purpose model on your photos. Feature availability and processing coverage are shown by the installed application.</p>
+
+    <h2>Where information is stored and transferred</h2>
+    <p>The Android application stores indexes, settings, local media references, previews, downloaded originals, annotations and pending work in local app storage. The Processor stores jobs, analysis results, caches, device trust and settings on your computer. Google authorization is kept locally using the platform's protected credential facilities; MPA does not store your Google password or send OAuth tokens to a paired phone or to GreenFuze.</p>
+    <p>Authorized clients communicate directly with Google over HTTPS. Originals you back up and synchronized metadata, annotations, previews and processing results are stored in the Google Drive destination or workspace you configure. A paired local-network connection exchanges setup, control and status information between your phone and computer. Access to a shared Drive workspace can expose its contents to other people who already have access to that workspace; review its sharing before placing private data there.</p>
+    <p>MPA does not sell Google user data, use it for advertising, or send your library to a GreenFuze-operated server. Google and your operating system handle their own services under their policies. Diagnostic reports are shared with the developer only when you choose to provide them; review them for private information first.</p>
+
+    <h2>Google API Limited Use</h2>
+    <p>MPA's use and transfer of information received from Google APIs adheres to the <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>, including its Limited Use requirements. Google user data is used for the user-facing photo-library features described here, not for sale, advertising, credit decisions, surveillance or training generalized artificial-intelligence models.</p>
+
+    <h2>Retention, disconnecting and deletion</h2>
+    <p>You control your source photos and Drive library. Disconnecting an account or uninstalling MPA does not automatically delete Drive originals, metadata or a previous workspace. Local app data can be removed by Android uninstall; local-only files and unsynchronized work must be protected before uninstalling. Processor uninstall preserves the Drive library and follows its displayed local-data removal choices.</p>
+    <p>Use MPA's explicit cleanup or source actions to remove supported local downloads or trash selected Drive originals. These are different operations. Generated caches can be rebuilt; human annotations and pending uploads are not disposable cache. You may independently remove retained workspace files through Google Drive after preserving anything you need.</p>
+    <p>You can revoke Google authorization at any time through <a href="https://myaccount.google.com/connections">Google Account connections</a>. Revocation stops future authorized access but does not remotely erase copies already stored on your devices or Drive. Device media permissions can be changed in Android settings.</p>
+
+    <h2>Website and support</h2>
+    <p>This static website is hosted by GitHub Pages and has no added analytics, advertising scripts or account forms. GitHub may process ordinary web-request information under its <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">privacy statement</a>. External links use the linked service's policies.</p>
+    <p>For privacy questions, use the developer contact on MPA's Google consent screen. General issues can be reported in the <a href="https://github.com/GreenFuze/MyPhotosAnywhere/issues">public support tracker</a>; do not include private media or credentials there. Material data-use changes will be described in this policy and relevant release notices.</p>
+  </main>
+  <footer><span>MyPhotosAnywhere · GreenFuze</span><nav aria-label="Legal navigation"><a href="./">Home</a><a href="privacy.html">Privacy policy</a><a href="terms.html">Terms of service</a></nav></footer>
+</body>
+</html>
